@@ -1,0 +1,98 @@
+/* Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #02240a;
+    color: white;
+    padding: 40px;
+}
+
+.logo {
+    max-width: 300px;
+    margin: -100px;
+    image-rendering: auto;
+    background-color: #f4f4f4;
+    margin-bottom: 0;
+    padding: 15px 25px;
+    
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-btn:hover {
+    background: #218838;
+}
+
+/* Seções */
+section {
+    padding: 40px;
+    background-color: white;
+}
+
+.service-box {
+    display: inline-block;
+    width: 30%;
+    margin: 20px;
+    background: #68dd84;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.service-box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Formulário */
+.contact {
+    padding: 40px;
+    background: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Rodapé */
+footer {
+    background-color: #02240a;
+    color: white;
+    padding: 20px;
+}
