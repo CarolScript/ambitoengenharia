@@ -1,8 +1,6 @@
 /* Reset */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     text-align: center;
 }
@@ -13,7 +11,6 @@ header {
     color: white;
     padding: 40px;
 }
-
 .logo {
     max-width: 300px;
     margin: -100px;
@@ -33,7 +30,6 @@ header {
     border-radius: 5px;
     font-size: 18px;
 }
-
 .cta-btn:hover {
     background: #218838;
 }
@@ -52,7 +48,6 @@ section {
     padding: 20px;
     border-radius: 8px;
 }
-
 .service-box img {
     width: 100%;
     border-radius: 8px;
@@ -63,7 +58,6 @@ section {
     padding: 40px;
     background: white;
 }
-
 form {
     display: flex;
     flex-direction: column;
@@ -77,11 +71,15 @@ input, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
-
-button {
+form input:focus,
+form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+form button {
+    width: 100%;
     padding: 15px;
     background-color: #28a745;
-    color: white;
     border: none;
     cursor: pointer;
 }
