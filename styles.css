@@ -1,4 +1,10 @@
-/* Reset */
+/* Reset Global e Box Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -11,14 +17,25 @@ header {
     color: white;
     padding: 40px;
 }
+
 .logo {
+    display: block;
+    width: 100%;
     max-width: 300px;
-    margin: -100px;
-    image-rendering: auto;
-    background-color: #f4f4f4;
-    margin-bottom: 0;
-    padding: 15px 25px;
-    
+    background-color: #f8f7f7;
+    margin: -100px auto 0; /* Centralizado com o efeito de "pop" */
+    padding: 15px 5px;
+}
+
+@media (max-width: 480px) {
+    .logo {
+        margin-top: 0;
+        max-width: 80%;
+        padding: 10px 15px;
+    }
+}
+h1{
+    padding-top: 30px;
 }
 
 .cta-btn {
@@ -29,17 +46,75 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
+    margin-top: 20px;
 }
+
 .cta-btn:hover {
     background: #218838;
 }
-
-/* Seções */
+/* Estilo para a seção "Sobre" */
+.about {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #02240a;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Estilo para a área de endereços */
+  .addresses h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #02240a;
+  }
+  
+  .addresses ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .addresses ul li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .addresses ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+/* Seções Gerais */
 section {
     padding: 40px;
     background-color: white;
+    margin: 20px;
 }
 
+/* Serviços */
 .service-box {
     display: inline-block;
     width: 30%;
@@ -48,44 +123,96 @@ section {
     padding: 20px;
     border-radius: 8px;
 }
+
 .service-box img {
     width: 100%;
     border-radius: 8px;
 }
 
-/* Formulário */
+/* Formulário - Visual Moderno e Organizado */
+/* Container da Seção de Contato */
 .contact {
-    padding: 40px;
+    padding: 40px 20px; /* Espaçamento lateral na seção */
     background: white;
 }
+
+/* Formulário */
 form {
-    display: flex;
-    flex-direction: column;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 30px 40px;  /* Espaçamento interno (lateral maior) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     width: 50%;
-    margin: auto;
+    max-width: 500px;
+    margin: 0 auto;  /* Centraliza o formulário */
+    text-align: left; /* Alinha o conteúdo à esquerda dentro do box */
 }
 
-input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
 }
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 16px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border 0.3s ease;
+}
+
 form input:focus,
 form textarea:focus {
     border-color: #28a745;
     outline: none;
 }
+
 form button {
     width: 100%;
     padding: 15px;
     background-color: #28a745;
     border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-button:hover {
+form button:hover {
     background-color: #218838;
+}
+
+/* Nossa Missão, Visão e Valores - Mais Vida e Organização */
+.mission {
+    background: linear-gradient(135deg, #f9f9f9, #e9f5e9);
+    padding: 60px 40px;
+    border-top: 5px solid #28a745;
+    border-bottom: 5px solid #28a745;
+    margin: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #02240a;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #333;
 }
 
 /* Rodapé */
@@ -93,4 +220,60 @@ footer {
     background-color: #02240a;
     color: white;
     padding: 20px;
+}
+
+/* Responsividade */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .service-box {
+        width: 45%;
+        margin: 15px;
+    }
+    form {
+        width: 70%;
+        padding: 25px 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+    .logo {
+        margin: -50px auto 0;
+    }
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    section {
+        padding: 20px;
+        margin: 10px;
+    }
+    .service-box {
+        width: 90%;
+        margin: 10px auto;
+    }
+    form {
+        width: 90%;
+        padding: 20px 20px;  /* Reduzido para caber na tela */
+    }
+    form input,
+    form textarea {
+        padding: 10px;
+    }
+    form button {
+        padding: 10px;
+    }
+    .mission {
+        padding: 40px 20px;
+    }
+    .mission h2 {
+        font-size: 2rem;
+    }
+    .mission p {
+        font-size: 1rem;
+    }
 }

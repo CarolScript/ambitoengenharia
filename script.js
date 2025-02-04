@@ -1,24 +1,47 @@
-document.getElementById("lead-form").addEventListener("submit", function(event){
-    event.preventDefault();
+// script.js
 
-    let formData = new FormData(this);
+// Quando o formulário é enviado...
+document.getElementById("lead-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Não recarrega a página
 
-    fetch("http://localhost:8000/salvar_lead.php", { // Ajuste conforme a hospedagem
+    // Pega os dados do formulário e os elementos de feedback
+    const formData = new FormData(this);
+    const feedback = document.getElementById("feedback");
+    const enviarBtn = document.getElementById("enviar-btn");
+
+    // Desativa o botão para evitar cliques múltiplos e mostra que está enviando
+    enviarBtn.disabled = true;
+    enviarBtn.textContent = "Enviando...";
+
+    // Faz a requisição para o seu PHP (ajuste a URL conforme sua hospedagem)
+    fetch("http://localhost:8000/salvar_lead.php", {
         method: "POST",
         body: formData
     })
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) throw new Error("Erro na rede");
+        return response.json();
+    })
     .then(data => {
-        if (data.includes("SUCESSO")) {
-            alert("Obrigado! Seus dados foram salvos com sucesso.");
+        // Se o status retornado for "sucesso", mostra mensagem positiva
+        if (data.status === "sucesso") {
+            feedback.textContent = "Obrigado! Seus dados foram salvos com sucesso.";
+            feedback.style.color = "green";
             document.getElementById("lead-form").reset();
         } else {
-            alert("Erro ao enviar. Verifique os dados e tente novamente.");
-            console.error("Erro:", data);
+            // Se houver erro, mostra a mensagem de erro vinda do PHP
+            feedback.textContent = "Erro ao enviar: " + data.mensagem;
+            feedback.style.color = "red";
         }
     })
     .catch(error => {
-        alert("Erro ao enviar. Tente novamente.");
+        feedback.textContent = "Erro ao enviar. Tente novamente.";
+        feedback.style.color = "red";
         console.error("Erro:", error);
+    })
+    .finally(() => {
+        // Reativa o botão e restaura o texto
+        enviarBtn.disabled = false;
+        enviarBtn.textContent = "Enviar";
     });
 });

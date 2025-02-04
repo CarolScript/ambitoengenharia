@@ -1,74 +1,128 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Âmbito Engenharia - Infraestrutura com Excelência</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Âmbito Engenharia - Infraestrutura com Excelência</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Se quiser um botão do WhatsApp flutuante, pode usar esse CSS */
+    .whatsapp-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <img src="logo.png" alt="Âmbito Engenharia" class="logo">
-        <h1>Infraestrutura de Alto Padrão</h1>
-        <p>Eficiência, Inovação e Sustentabilidade para Grandes Projetos</p>
-        <a href="#formulario" class="cta-btn">Solicite um Orçamento</a>
-    </header>
+  <!-- Cabeçalho -->
+  <header>
+    <img src="logo.png" alt="Âmbito Engenharia" class="logo">
+    <h1>Infraestrutura de Alto Padrão</h1>
+    <p>Eficiência, Inovação e Sustentabilidade para Grandes Projetos</p>
+    <a href="#formulario" class="cta-btn">Solicite um Orçamento</a>
+  </header>
 
-    <!-- Seção Sobre a Empresa -->
-    <section class="about">
-        <h2>Sobre a Âmbito Engenharia</h2>
-        <p>Especialistas em infraestrutura, fornecendo soluções inovadoras para construção, pavimentação e saneamento.</p>
-        <p><strong>📍 Localização:</strong> Avenida Castelo Branco, 1019, Centro Sul, Várzea Grande - MT</p>
-    </section>
+ <!-- Seção Sobre a Empresa -->
+<section class="about">
+    <h2>Sobre a Âmbito Engenharia</h2>
+    <p>
+      Somos especialistas em infraestrutura, fornecendo soluções inovadoras para
+      construção, pavimentação e saneamento. Com excelência e foco no cliente,
+      transformamos visões em realidade.
+    </p>
+    
+    <div class="addresses">
+      <h3>Endereços</h3>
+      <ul>
+        <li>
+          <strong>Várzea Grande - MT:</strong> Avenida Castelo Branco, 1019, Centro Sul, Várzea Grande - MT
+        </li>
+        <li>
+          <strong>São Paulo - SP:</strong> Avenida Brigadeiro Faria Lima, 1485, Ed. Empresarial Mario Garnero, Jardim Paulistano, São Paulo - SP
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <!-- Seção de Serviços -->
+  <section class="services">
+    <h2>Nossos Serviços</h2>
+    <div class="service-box">
+      <img src="pavimentação2.png" alt="Terraplenagem">
+      <h3>Terraplenagem e Pavimentação</h3>
+      <p>Preparação de terrenos com qualidade e precisão.</p>
+    </div>
+    <div class="service-box">
+      <img src="ponte.jpg" alt="Construção de Pontes">
+      <h3>Construção de Estradas e Pontes</h3>
+      <p>Projetos estruturais seguros e eficientes.</p>
+    </div>
+    <div class="service-box">
+      <img src="saneamento.jpg" alt="Obras de Saneamento">
+      <h3>Obras de Saneamento</h3>
+      <p>Infraestrutura para água, esgoto e drenagem.</p>
+    </div>
+  </section>
 
-    <!-- Seção de Serviços -->
-    <section class="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service-box">
-            <img src="pavimentação2.png" alt="Terraplenagem">
-            <h3>Terraplenagem e Pavimentação</h3>
-            <p>Preparação de terrenos com qualidade e precisão.</p>
-        </div>
-        <div class="service-box">
-            <img src="ponte.jpg" alt="Construção de Pontes">
-            <h3>Construção de Estradas e Pontes</h3>
-            <p>Projetos estruturais seguros e eficientes.</p>
-        </div>
-        <div class="service-box">
-            <img src="saneamento.jpg" alt="Obras de Saneamento">
-            <h3>Obras de Saneamento</h3>
-            <p>Infraestrutura para água, esgoto e drenagem.</p>
-        </div>
-    </section>
+  <!-- Missão, Visão e Valores -->
+  <section class="mission">
+    <h2>Nossa Missão, Visão e Valores</h2>
+    <p><strong>Missão:</strong> Transformar visões em realidade, entregando engenharia com excelência.</p>
+    <p><strong>Visão:</strong> Ser referência global em engenharia, promovendo inovação e sustentabilidade.</p>
+    <p><strong>Valores:</strong> Excelência, Integridade, Inovação, Responsabilidade Ambiental, Trabalho em Equipe e Foco no Cliente.</p>
+  </section>
 
-    <!-- Missão, Visão e Valores -->
-    <section class="mission">
-        <h2>Nossa Missão, Visão e Valores</h2>
-        <p><strong>Missão:</strong> Transformar visões em realidade, entregando engenharia com excelência.</p>
-        <p><strong>Visão:</strong> Ser referência global em engenharia, promovendo inovação e sustentabilidade.</p>
-        <p><strong>Valores:</strong> Excelência, Integridade, Inovação, Responsabilidade Ambiental, Trabalho em Equipe, Foco no Cliente.</p>
-    </section>
+  <!-- Seção de Contato -->
+  <section class="contact" id="formulario">
+    <h2>Solicite um Orçamento</h2>
+    <p>Preencha o formulário abaixo e nossa equipe entrará em contato.</p>
+    
+    <!-- Informações de Contato -->
+    <div class="contact-info">
+      <p><strong>Telefone:</strong> (65) 3222-1234</p>
+      <p><strong>WhatsApp:</strong> (65) 9 8765-4321</p>
+      <!-- Botão que abre o WhatsApp direto -->
+      <a href="https://wa.me/5565987654321" target="_blank" class="whatsapp-btn">Fale conosco pelo WhatsApp</a>
+    </div>
+    
+    <form id="lead-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
 
-    <!-- Formulário de Contato -->
-    <section class="contact" id="formulario">
-        <h2>Solicite um Orçamento</h2>
-        <p>Preencha o formulário abaixo e nossa equipe entrará em contato.</p>
-        <form id="lead-form">
-            <input type="text" name="nome" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
-            <input type="tel" name="telefone" placeholder="Seu Telefone" required>
-            <textarea name="mensagem" placeholder="Descreva sua necessidade" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>© 2025 Âmbito Engenharia. Todos os direitos reservados.</p>
-    </footer>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" pattern="^\d{10,11}$" required>
 
-    <script src="script.js"></script>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Descreva sua necessidade" required></textarea>
+
+      <button type="submit" id="enviar-btn">Enviar</button>
+      <p id="feedback" class="feedback"></p>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Âmbito Engenharia. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp (opcional) -->
+  <a href="https://wa.me/5565999348974?text=Desejo%20solicitar%20orçamento." target="_blank" class="whatsapp-flutuante">
+    WhatsApp
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
