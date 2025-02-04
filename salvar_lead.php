@@ -9,6 +9,15 @@ $dbname = "postgres";
 $user = "postgres";
 $password = "Lucas1401$";
 
+$host = getenv('PGlocalhost');
+$port = getenv('PG5432');
+$dbname = getenv('PGpostgres');
+$user = getenv('PGpostgres');
+$password = getenv('PGLucas1401$');
+
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+
+
 // Criando conexão
 $conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
 
